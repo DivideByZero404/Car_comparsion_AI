@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!-- ============================
+         SEARCH
+    ============================= -->
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>carcompai.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ============================
+         COMPARE SYSTEM
+    ============================= -->
+
+    <!-- Add To Compare -->
+    <servlet>
+        <servlet-name>AddToCompareServlet</servlet-name>
+        <servlet-class>carcompai.AddToCompareServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddToCompareServlet</servlet-name>
+        <url-pattern>/addToCompare</url-pattern>
+    </servlet-mapping>
+
+    <!-- Save Compare to session -->
+    <servlet>
+        <servlet-name>SaveCompareServlet</servlet-name>
+        <servlet-class>carcompai.SaveCompareServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveCompareServlet</servlet-name>
+        <url-pattern>/saveCompare</url-pattern>
+    </servlet-mapping>
+
+    <!-- Compare Page -->
+    <servlet>
+        <servlet-name>CompareServlet</servlet-name>
+        <servlet-class>carcompai.CompareServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompareServlet</servlet-name>
+        <url-pattern>/compare</url-pattern>
+    </servlet-mapping>
+
+    <!-- Remove single compare car -->
+    <servlet>
+        <servlet-name>RemoveCompareServlet</servlet-name>
+        <servlet-class>carcompai.RemoveCompareServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RemoveCompareServlet</servlet-name>
+        <url-pattern>/removeCompare</url-pattern>
+    </servlet-mapping>
+
+    <!-- Clear all compare -->
+    <servlet>
+        <servlet-name>ClearCompareServlet</servlet-name>
+        <servlet-class>carcompai.ClearCompareServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClearCompareServlet</servlet-name>
+        <url-pattern>/clearCompare</url-pattern>
+    </servlet-mapping>
+
+
+      <!-- ============================
+     AI CAR ADVISOR
+============================= -->
+<servlet>
+    <servlet-name>AICompareServlet</servlet-name>
+    <servlet-class>carcompai.AICompareServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>AICompareServlet</servlet-name>
+    <url-pattern>/aiCompare</url-pattern>
+</servlet-mapping>
+
+
+
+
+    <!-- ============================
+         FAVOURITES
+    ============================= -->
+    <servlet>
+        <servlet-name>AddFavouriteServlet</servlet-name>
+        <servlet-class>carcompai.AddFavouriteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddFavouriteServlet</servlet-name>
+        <url-pattern>/addFavourite</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SaveFavouriteServlet</servlet-name>
+        <servlet-class>carcompai.SaveFavouriteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveFavouriteServlet</servlet-name>
+        <url-pattern>/saveFavourite</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FavouriteServlet</servlet-name>
+        <servlet-class>carcompai.FavouriteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FavouriteServlet</servlet-name>
+        <url-pattern>/favourites</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClearAllFavouritesServlet</servlet-name>
+        <servlet-class>carcompai.ClearAllFavouritesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClearAllFavouritesServlet</servlet-name>
+        <url-pattern>/clearFavourites</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ============================
+         LOGOUT
+    ============================= -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>carcompai.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================
+         LOGIN
+    ============================= -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>carcompai.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================
+         SIGNUP
+    ============================= -->
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>carcompai.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+
+    <!-- ============================
+         RECENTLY VIEWED
+    ============================= -->
+    <servlet>
+        <servlet-name>RecentlyViewedServlet</servlet-name>
+        <servlet-class>carcompai.RecentlyViewedServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecentlyViewedServlet</servlet-name>
+        <url-pattern>/recentlyViewed</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- ============================
+         CLEANUP LISTENER
+    ============================= -->
+    <listener>
+        <listener-class>carcompai.DriverCleanup</listener-class>
+    </listener>
+
+</web-app>
